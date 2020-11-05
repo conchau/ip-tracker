@@ -84,6 +84,6 @@ $("button").click(function() {
 function updateLatLng(updatedLat, updatedLng) {
     var newLat = updatedLat;
     var newLng = updatedLng;
-    mymap.setView([newLat, newLng], 13);
+    mymap.setView([newLat, newLng], 13).panTo([newLat+.018, newLng]);
     var newMarker = L.marker([newLat, newLng], {icon: iconOptions}).addTo(mymap);
 }
